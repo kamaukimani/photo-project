@@ -3,48 +3,48 @@
         {
             "id": 1,
             "name": "webDevelopment",
-            "imageUrl": "",
-            "description": "",
+            "imageUrl": "images/webdevelopment.jpeg",
+            "description": "Creative, technical, dynamic",
             "rating": 5,
             "likes": "4"
         },
         {
              "id": 2,
             "name": "itConsultation",
-            "imageUrl": "",
-            "description": "",
+            "imageUrl": "images/itconsulting.jpeg",
+            "description": "Strategic, analytical, solution-oriented",
             "rating": 5,
             "likes": "3"
         },
         {
              "id": 3,
             "name": "laptopSale",
-            "imageUrl": "",
-            "description": "",
+            "imageUrl": "images/laptopsale.jpeg",
+            "description": "Affordable, reliable, portable",
             "rating": 5,
             "likes": "4"
         },
         {
              "id": 4,
             "name": "webDesign",
-            "imageUrl": "",
-            "description": "",
+            "imageUrl": "images/webdesign.jpeg",
+            "description": "Visual, functional, engaging",
             "rating": 5,
             "likes": "4"
         },
         {
              "id": 5,
             "name": "cloudComputing",
-            "imageUrl": "",
-            "description": "",
+            "imageUrl": "images/cloudcomputing.jpeg",
+            "description": "Scalable, flexible, efficient",
             "rating": 5,
             "likes": "5"
         },
         {
              "id": 6,
             "name": "cyberSecurity",
-            "imageUrl": "",
-            "description": "",
+            "imageUrl": "images/cybersecurity.jpeg",
+            "description": "Protective, vigilant, resilient",
             "rating": 5,
             "likes": "5"
         }
