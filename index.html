@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Photo Project</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./src/index.js" defer></script>
+</head>
+<body>
+    <div>
+         <h2>A brief introduction of my project</h2>
+         <p>Brief explanation on how to use the site</p>
+
+    </div>
+    <div>
+        <form>
+            <label for="name">Select Name</label>
+            <select required>
+                <option>webDevelopment</option>
+                <option>itConsultation</option>
+                <option>laptopSale</option>
+                <option>webDesign</option>
+                <option>cloudComputing</option>
+                <option>cyberSecurity</option>
+            </select> <br>
+            <label for="url">Enter Image Url</label><br>
+            <input type="url" id="url" name="imageUrl" required><br>
+            <label for="description">Enter Description</label><br>
+            <textarea id="description" name="description" required></textarea><br>
+            <label for="rating">Rate the image</label><br>
+            <select required>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+
+            </select><br>
+            <lable for="like">Like The Photo</lable><br>
+            <input type="number" id="like" min="0" max="5" required><br>
+            <input type="submit" value="Add Photo">
+    
+        </form>
+    </div>
+   <section id="display">
+
+   </section>
+
+</body>
+</html>
