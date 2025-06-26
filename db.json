@@ -1,0 +1,52 @@
+{
+    "photoDetails": [
+        {
+            "id": 1,
+            "name": "webDevelopment",
+            "imageUrl": "",
+            "description": "",
+            "rating": 5,
+            "likes": "4"
+        },
+        {
+             "id": 2,
+            "name": "itConsultation",
+            "imageUrl": "",
+            "description": "",
+            "rating": 5,
+            "likes": "3"
+        },
+        {
+             "id": 3,
+            "name": "laptopSale",
+            "imageUrl": "",
+            "description": "",
+            "rating": 5,
+            "likes": "4"
+        },
+        {
+             "id": 4,
+            "name": "webDesign",
+            "imageUrl": "",
+            "description": "",
+            "rating": 5,
+            "likes": "4"
+        },
+        {
+             "id": 5,
+            "name": "cloudComputing",
+            "imageUrl": "",
+            "description": "",
+            "rating": 5,
+            "likes": "5"
+        },
+        {
+             "id": 6,
+            "name": "cyberSecurity",
+            "imageUrl": "",
+            "description": "",
+            "rating": 5,
+            "likes": "5"
+        }
+    ]
+}
