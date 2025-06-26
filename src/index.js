@@ -1,16 +1,12 @@
 console.log("are we really")
 //http://localhost:3000/photoDetails
-function getPhotos(){
-fetch("http://localhost:3000/photoDetails")
-.then(response => response.json())
-.then(photoDetails => photoDetails.forEach(e => handleForm(e)))
 
-}
-
- let form = document.querySelector("form")
- form.addEventListener("submit", handleForm)
+let form = document.querySelector("form")
+ form.addEventListener("submit",function(event){
+event.preventDefault()
+ } )
  function handleForm(e){
-e.preventDefault()
+
 let photo = document.createElement("li")
 photo.className = "photos"
 photo.innerHTML = `
@@ -30,8 +26,16 @@ photo.innerHTML = `
 //Add photo to  Dom
 document.querySelector("#display").appendChild(photo)
 }
+function getPhotos(){
+fetch("http://localhost:3000/photoDetails")
+.then(response => response.json())
+.then(photoDetails => photoDetails.forEach(e => handleForm(e)))
+
+}
+
+ 
 
 function initialize(){
-    handleForm()
+    getPhotos()
 }
 initialize()
