@@ -15,7 +15,7 @@ photo.innerHTML = `
 <h3>${e.name}</h3>
 <p>${e.description}</p>
 <p>${e.rating}</p>
-<p>${e.likes}</p>
+<p>${e.price}</p>
 </div>
 <div classs="buttons">
 <button>like</button>
