@@ -1,52 +1,60 @@
 {
-    "photoDetails": [
-        {
-            "id": 1,
-            "name": "webDevelopment",
-            "imageUrl": "images/webdevelopment.jpeg",
-            "description": "Creative, technical, dynamic",
-            "rating": 5,
-            "price": "KES 700000"
-        },
-        {
-             "id": 2,
-            "name": "itConsultation",
-            "imageUrl": "images/itconsulting.jpeg",
-            "description": "Strategic, analytical, solution-oriented",
-            "rating": 5,
-            "price": "KES 350000"
-        },
-        {
-             "id": 3,
-            "name": "laptopSale",
-            "imageUrl": "images/laptopsale.jpeg",
-            "description": "Affordable, reliable, portable",
-            "rating": 5,
-            "price": "KES 150000"
-        },
-        {
-             "id": 4,
-            "name": "webDesign",
-            "imageUrl": "images/webdesign.jpeg",
-            "description": "Visual, functional, engaging",
-            "rating": 5,
-            "price": "KES 600000"
-        },
-        {
-             "id": 5,
-            "name": "cloudComputing",
-            "imageUrl": "images/cloudcomputing.jpeg",
-            "description": "Scalable, flexible, efficient",
-            "rating": 5,
-            "price": "KES 250000"
-        },
-        {
-             "id": 6,
-            "name": "cyberSecurity",
-            "imageUrl": "images/cybersecurity.jpeg",
-            "description": "Protective, vigilant, resilient",
-            "rating": 5,
-            "price": "KES 450000"
-        }
-    ]
+  "photoDetails": [
+    {
+      "id": "1",
+      "name": "webDevelopment",
+      "imageUrl": "images/webdevelopment.jpeg",
+      "description": "Creative, technical, dynamic",
+      "rating": 5,
+      "price": 150000
+    },
+    {
+      "id": "2",
+      "name": "itConsultation",
+      "imageUrl": "images/itconsulting.jpeg",
+      "description": "Strategic, analytical, solution-oriented",
+      "rating": 5,
+      "price": 200000
+    },
+    {
+      "id": "3",
+      "name": "laptopSale",
+      "imageUrl": "images/laptopsale.jpeg",
+      "description": "Affordable, reliable, portable",
+      "rating": 5,
+      "price": 0
+    },
+    {
+      "id": "4",
+      "name": "webDesign",
+      "imageUrl": "images/webdesign.jpeg",
+      "description": "Visual, functional, engaging",
+      "rating": 5,
+      "price": 0
+    },
+    {
+      "id": "5",
+      "name": "cloudComputing",
+      "imageUrl": "images/cloudcomputing.jpeg",
+      "description": "Scalable, flexible, efficient",
+      "rating": 5,
+      "price": 0
+    },
+    {
+      "id": "6",
+      "name": "cyberSecurity",
+      "imageUrl": "images/cybersecurity.jpeg",
+      "description": "Protective, vigilant, resilient",
+      "rating": 5,
+      "price": 0
+    },
+    {
+      "id": "3335",
+      "name": "webDesign",
+      "imageUrl": "https://img.freepik.com/free-photo/web-design-technology-browsing-programming-concept_53876-163260.jpg?semt=ais_items_boosted&w=740",
+      "description": "Visual",
+      "rating": "4",
+      "price": 100000
+    }
+  ]
 }
