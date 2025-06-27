@@ -1,3 +1,4 @@
+document.addEventListener("DOMContentLoaded", () => {
 console.log("are we really")
 //http://localhost:3000/photoDetails
 
@@ -117,7 +118,7 @@ function initialize(){
 }
 initialize()
 
-
+})
 /*
 // Defining text characters for the empty and full hearts for you to use later.
 const EMPTY_HEART = '♡'
