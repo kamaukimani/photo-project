@@ -22,7 +22,9 @@ let form = document.querySelector("form")
     let photo = document.createElement("li")
     photo.className = "photos"
     photo.innerHTML = `
+    <div class="image-container">
     <img src="${image.imageUrl}">
+    </div>
     <div class="photo">
     <h3>${image.name}</h3>
     <p>${image.description}</p>
