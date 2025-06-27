@@ -23,3 +23,46 @@
 .activated-heart {
   color: red;
 }
+#display{
+    margin-top: 2%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 150px;
+    justify-content: space-evenly;
+    text-align: center;
+}
+img{
+    width: 298px;
+    height: 169px;
+
+
+}
+body{
+    background-color: aquamarine;
+}
+form{
+    text-align: center;
+    border-radius: 40px;
+    border: 1px solid black;
+    padding-top: 20px;
+    margin-top: 2%;
+    background-color: beige;
+    
+}
+#sub{
+    border-radius: 20px;
+    margin-top: 2%;
+    background-color: red;
+    
+}
+.image-container{
+    border: 1px solid black;
+    border-radius: 30px;
+    width: 350px;
+    height: 200px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    background-color: bisque;
+}
+
