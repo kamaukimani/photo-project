@@ -30,7 +30,7 @@
       "imageUrl": "images/webdesign.jpeg",
       "description": "Visual, functional, engaging",
       "rating": 5,
-      "price": 0
+      "price": 200000
     },
     {
       "id": "5",
@@ -38,7 +38,7 @@
       "imageUrl": "images/cloudcomputing.jpeg",
       "description": "Scalable, flexible, efficient",
       "rating": 5,
-      "price": 0
+      "price": 250000
     },
     {
       "id": "6",
@@ -46,7 +46,7 @@
       "imageUrl": "images/cybersecurity.jpeg",
       "description": "Protective, vigilant, resilient",
       "rating": 5,
-      "price": 0
+      "price": 750000
     },
     {
       "id": "3335",
