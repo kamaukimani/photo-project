@@ -111,7 +111,7 @@ fetch("http://localhost:3000/photoDetails")
         }
     })
     .then(response => response.json())
-    then(image => console.log(image))
+    .then(image => console.log(image))
 
  }
 
