@@ -1,0 +1,25 @@
+.like-glyph {
+  cursor: pointer;
+}
+.hidden {
+  visibility: hidden;
+}
+#modal p {
+  margin-bottom: 0;
+}
+#modal {
+  border-radius: 10px;
+  background-color: maroon;
+  color: white;
+
+  margin: 1em;
+  padding: 1em;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.activated-heart {
+  color: red;
+}

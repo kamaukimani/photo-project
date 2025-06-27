@@ -8,6 +8,10 @@
     <script src="./src/index.js" defer></script>
 </head>
 <body>
+     <div id="modal" class="hidden">
+      <h2>Error!</h2>
+      <p id="modal-message"></p>
+    </div>
     <div>
          <h2>A brief introduction of my project</h2>
          <p>Brief explanation on how to use the site</p>
@@ -16,7 +20,7 @@
     <div>
         <form>
             <label for="name">Select Name</label>
-            <select required>
+            <select required name="name">
                 <option>webDevelopment</option>
                 <option>itConsultation</option>
                 <option>laptopSale</option>
@@ -25,21 +29,23 @@
                 <option>cyberSecurity</option>
             </select> <br>
             <label for="url">Enter Image Url</label><br>
-            <input type="url" id="url" name="imageUrl" required><br>
+            <input type="url" id="url" name="image_Url" required><br>
             <label for="description">Enter Description</label><br>
             <textarea id="description" name="description" required></textarea><br>
             <label for="rating">Rate the image</label><br>
-            <select required>
+            <select required name="rating">
                 <option>1</option>
                 <option>2</option>
                 <option>3</option>
                 <option>4</option>
                 <option>5</option>
-
             </select><br>
-            <lable for="like">Like The Photo</lable><br>
-            <input type="number" id="like" min="0" max="5" required><br>
-            <input type="submit" value="Add Photo">
+            <input type="submit" value="Add Service">
+            <footer>
+        <ul>
+          <li class="like">Like! <span class="like-glyph">&#x2661;</span></li>
+        </ul>
+      </footer>
     
         </form>
     </div>
