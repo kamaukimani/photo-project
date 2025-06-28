@@ -46,16 +46,26 @@ let form = document.querySelector("form")
     `
     //Increase price by 100000
 photo.querySelector("#increase").addEventListener("click", () => {
-    image.price+= 100000
+  if (image.price +100000 <= 999999){
+    image.price += 100000;
+    
+  //image.price+= 100000
   photo.querySelector("span").textContent = image.price
   updatePrice(image)
+  } else {
+    alert("Maximum price 999999!")
+  }
 
 })
 //Reduce price by 50000
 photo.querySelector("#reduce").addEventListener("click", () => {
-    image.price-= 50000
+  if (image.price - 50000 >= 100000){ 
+  image.price-= 50000
     photo.querySelector("span").textContent = image.price
     reducePrice(image)
+    } else {
+      alert("Minimum price is 100000!")
+    }
 })
 //delete service
 photo.querySelector("#delete").addEventListener("click", () => {
