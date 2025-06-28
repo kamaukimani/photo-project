@@ -39,6 +39,10 @@ let form = document.querySelector("form")
     <button id="reduce"> Reduce $50000</button>
     <button id="delete">Delete</button>
     </div>
+    <br>
+    <div class="purchase-button">
+    <button id="purchase">Purchase Item</button>
+    </div>
     `
 photo.querySelector("#increase").addEventListener("click", () => {
     image.price+= 100000
@@ -64,8 +68,11 @@ photo.querySelector("#delete").addEventListener("click", () => {
       heart.classList.toggle("activate-heart", image.liked);
       updateLike(image.id, image.liked);
     });
-    heart.addEventListener("mouseover", () =>{
-      alert("Click to set as Favorite!")
+    // heart.addEventListener("mouseover", () =>{
+    //   alert("Click to set as Favorite!")
+    // })
+    photo.querySelector("#purchase").addEventListener("click", () => {
+      alert(`You've successfully purchased the Service!`)
     })
 //console.log(photo.querySelector("#delete"))
 //console.log(photo.querySelector("#reduce"))
