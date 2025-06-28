@@ -20,7 +20,7 @@
   left: 0;
   right: 0;
 }
-.activated-heart {
+.activate-heart {
   color: red;
 }
 #display{
@@ -47,6 +47,8 @@ form{
     padding-top: 20px;
     margin-top: 2%;
     background-color: beige;
+    margin-bottom: 2%;
+    height: 250px;
     
 }
 #sub{
