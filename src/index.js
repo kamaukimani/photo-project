@@ -44,17 +44,20 @@ let form = document.querySelector("form")
     <button id="purchase">Purchase Item</button>
     </div>
     `
+    //Increase price by 100000
 photo.querySelector("#increase").addEventListener("click", () => {
     image.price+= 100000
   photo.querySelector("span").textContent = image.price
   updatePrice(image)
 
 })
+//Reduce price by 50000
 photo.querySelector("#reduce").addEventListener("click", () => {
     image.price-= 50000
     photo.querySelector("span").textContent = image.price
     reducePrice(image)
 })
+//delete service
 photo.querySelector("#delete").addEventListener("click", () => {
     photo.remove()
     deleteImage(image.id)
@@ -71,6 +74,8 @@ photo.querySelector("#delete").addEventListener("click", () => {
     // heart.addEventListener("mouseover", () =>{
     //   alert("Click to set as Favorite!")
     // })
+
+    //Add an alert to purchase button
     photo.querySelector("#purchase").addEventListener("click", () => {
       alert(`You've successfully purchased the Service!`)
     })
@@ -81,7 +86,7 @@ photo.querySelector("#delete").addEventListener("click", () => {
 document.querySelector("#display").appendChild(photo)
 }
 
- 
+ //sending a GET request to JSON
 
 function getPhotos(){
 fetch("http://localhost:3000/photoDetails")
@@ -89,7 +94,7 @@ fetch("http://localhost:3000/photoDetails")
 .then(photoDetails => photoDetails.forEach(image => showServive(image)))
 
 }
-
+//Updating services using the form and make it persist
  function addPhoto(photoObj){
     fetch("http://localhost:3000/photoDetails", {
         method: "POST",
@@ -101,6 +106,8 @@ fetch("http://localhost:3000/photoDetails")
     .then(response => response.json())
     .then(image => console.log(image))
  }
+
+ //Function increase the price and make the price persist after reloading
  function updatePrice(photoObj){
     fetch(`http://localhost:3000/photoDetails/${photoObj.id}`,{
         method: "PATCH",
@@ -112,6 +119,7 @@ fetch("http://localhost:3000/photoDetails")
     .then(response => response.json())
     .then(image => console.log(image))
  }
+ //Function to reduce price and make it persist when the page reloads
  function reducePrice(photoObj){
     fetch(`http://localhost:3000/photoDetails/${photoObj.id}`, {
          method: "PATCH",
@@ -123,6 +131,8 @@ fetch("http://localhost:3000/photoDetails")
     .then(response => response.json())
     .then(image => console.log(image))
     }
+
+    //Function to change the like and make it persist when the page reloads
     function updateLike(id, likedStatus) {
     fetch(`http://localhost:3000/photoDetails/${id}`, {
       method: "PATCH",
@@ -134,7 +144,7 @@ fetch("http://localhost:3000/photoDetails")
       .then(response => response.json())
       .then(updated => console.log("Liked status updated:", updated));
   }
-
+//Function to delete the servce 
  function deleteImage(id){
     fetch(`http://localhost:3000/photoDetails/${id}`,{
         method: "DELETE",
@@ -146,65 +156,11 @@ fetch("http://localhost:3000/photoDetails")
     .then(image => console.log(image))
 
  }
-
+//Function to render our images 
+//Gets Data and renders our services 
 function initialize(){
     getPhotos()
 }
 initialize()
 
 })
-/*
-// Defining text characters for the empty and full hearts for you to use later.
-const EMPTY_HEART = '♡'
-const FULL_HEART = '♥'
-
-// Your JavaScript code goes here!
-const modal = document.getElementById("modal");
-const modalMessage = document.getElementById("modal-message");
-
-
-const hearts = document.querySelectorAll(".like-glyph");
-hearts.forEach(heart => {
-  heart.addEventListener("click", () => {
-    mimicServerCall()
-      .then(() => {
-        // If the heart is empty, fill it
-        if (heart.innerText === EMPTY_HEART) {
-          heart.innerText = FULL_HEART;
-          heart.classList.add("activated-heart");
-        } else {
-          // If the heart is full, empty it
-          heart.innerText = EMPTY_HEART;
-          heart.classList.remove("activated-heart");
-        }
-      })
-      .catch(error => {
-        // Show the error modal with the message
-        modal.classList.remove("hidden");
-        modalMessage.innerText = error;
-
-        // Hide the modal after 3 seconds
-        setTimeout(() => {
-          modal.classList.add("hidden");
-        }, 3000);
-      });
-  });
-});
-
-//------------------------------------------------------------------------------
-// Don't change the code below: this function mocks the server response
-//------------------------------------------------------------------------------
-
-function mimicServerCall(url="http://mimicServer.example.com", config={}) {
-  return new Promise(function(resolve, reject) {
-    setTimeout(function() {
-      let isRandomFailure = Math.random() < .2
-      if (isRandomFailure) {
-        reject("Random server error. Try again.");
-      } else {
-        resolve("Pretend remote server notified of action!");
-      }
-    }, 300);
-  });
-}
-*/
