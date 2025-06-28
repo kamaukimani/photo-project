@@ -32,6 +32,7 @@ let form = document.querySelector("form")
     <p>
     $<span class="price">${image.price}</span>Price
     <p>
+    <span class="like ${image.liked ? "activate-heart" : ""}">${image.liked ? "♥" : "♡"}</span> 
     </div>
     <div class="buttons">
     <button id="increase">Increase $100000</button>
@@ -54,6 +55,18 @@ photo.querySelector("#delete").addEventListener("click", () => {
     photo.remove()
     deleteImage(image.id)
 })
+ // Like button
+//  console.log(photo.querySelector("#like"))
+    const heart = photo.querySelector(".like");
+    heart.addEventListener("click", () => {
+      image.liked = !image.liked;
+      heart.innerText = image.liked ? "♥" : "♡";
+      heart.classList.toggle("activate-heart", image.liked);
+      updateLike(image.id, image.liked);
+    });
+    heart.addEventListener("mouseover", () =>{
+      alert("Click to set as Favorite!")
+    })
 //console.log(photo.querySelector("#delete"))
 //console.log(photo.querySelector("#reduce"))
  //console.log( photo.querySelector("span"))
@@ -103,6 +116,18 @@ fetch("http://localhost:3000/photoDetails")
     .then(response => response.json())
     .then(image => console.log(image))
     }
+    function updateLike(id, likedStatus) {
+    fetch(`http://localhost:3000/photoDetails/${id}`, {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({ liked: likedStatus })
+    })
+      .then(response => response.json())
+      .then(updated => console.log("Liked status updated:", updated));
+  }
+
  function deleteImage(id){
     fetch(`http://localhost:3000/photoDetails/${id}`,{
         method: "DELETE",
