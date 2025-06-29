@@ -17,6 +17,15 @@ let form = document.querySelector("form")
     showServive(photoObj)
     addPhoto(photoObj)
  }
+ // change the background color of the Add Service button to green when the mouse is over it
+ const subBtn = document.querySelector("#sub")
+ subBtn.addEventListener("mouseover", () => {
+  subBtn.style.backgroundColor = "green "
+ })
+ //return the background color of the Add Service button to red when the mouse is out
+ subBtn.addEventListener("mouseout", () => {
+  subBtn.style.backgroundColor = "red"
+ })
  function showServive(image){
     // Building the image
     let photo = document.createElement("li")
