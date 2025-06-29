@@ -78,7 +78,7 @@ photo.querySelector("#reduce").addEventListener("click", () => {
 })
 //delete service
 photo.querySelector("#delete").addEventListener("click", () => {
-  if( confirm("Are you sure you want to delete the servie?")){   //confirm before deleting service
+  if( confirm("Are you sure you want to delete the service?")){   //confirm before deleting service
     photo.remove()
     deleteImage(image.id)
   }
