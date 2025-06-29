@@ -12,7 +12,7 @@ let form = document.querySelector("form")
         imageUrl: e.target.image_Url.value,
         description: e.target.description.value,
         rating: e.target.rating.value,
-        price: 0
+        price: 100000
     }
     showServive(photoObj)
     addPhoto(photoObj)
@@ -28,7 +28,7 @@ let form = document.querySelector("form")
     <div class="photo">
     <h3>${image.name}</h3>
     <p>${image.description}</p>
-    <p>${image.rating}</p>
+    <p>Rating:${image.rating}</p>
     <p>
     $<span class="price">${image.price}</span>Price
     <p>
@@ -47,7 +47,7 @@ let form = document.querySelector("form")
     //Increase price by 100000
 photo.querySelector("#increase").addEventListener("click", () => {
   if (image.price +100000 <= 999999){
-    image.price += 100000;
+    image.price += 100000;                                            //setting maximum price to 999999
     
   //image.price+= 100000
   photo.querySelector("span").textContent = image.price
@@ -59,7 +59,7 @@ photo.querySelector("#increase").addEventListener("click", () => {
 })
 //Reduce price by 50000
 photo.querySelector("#reduce").addEventListener("click", () => {
-  if (image.price - 50000 >= 100000){ 
+  if (image.price - 50000 >= 100000){                               // setting minimum price to 100000
   image.price-= 50000
     photo.querySelector("span").textContent = image.price
     reducePrice(image)
@@ -69,9 +69,14 @@ photo.querySelector("#reduce").addEventListener("click", () => {
 })
 //delete service
 photo.querySelector("#delete").addEventListener("click", () => {
+  if( confirm("Are you sure you want to delete the servie?")){   //confirm before deleting service
     photo.remove()
     deleteImage(image.id)
+  }
 })
+
+ 
+
  // Like button
 //  console.log(photo.querySelector("#like"))
     const heart = photo.querySelector(".like");
